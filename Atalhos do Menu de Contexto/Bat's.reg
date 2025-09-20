@@ -3,11 +3,11 @@ Windows Registry Editor Version 5.00
 ; PASTA PRINCIPAL NO MENU DE CONTEXTO
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Bats]
 "MUIVerb"="Bat's"
-"Icon"="C:\\Users\\boriur\\Pictures\\Icon\\code.ico"
+"Icon"="C:\\Users\\seu-usuário\\Pictures\\Icon\\code.ico"
 "SubCommands"=""
 
 ; LIMPEZA DE ARQUIVOS TEMPORÁRIOS (COM ELEVAÇÃO)
-[HKEY_CLASSES_ROOT\Directory\Background\shell\Bats\shell\01_LimparTemp]
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Bats\shell\Limpar Temp]
 "MUIVerb"="Limpar Temp"
 "Icon"="cleanmgr.exe"
 "HasLUAShield"=""
@@ -16,7 +16,7 @@ Windows Registry Editor Version 5.00
 @="powershell -Command \"Start-Process cmd -ArgumentList '/c del /s /q \\\"%temp%\\\\*.*\\\" && rd /s /q \\\"%temp%\\\" && del /s /q \\\"C:\\\\Windows\\\\Temp\\\\*.*\\\" && rd /s /q \\\"C:\\\\Windows\\\\Temp\\\"' -Verb RunAs\""
 
 ; REINICIAR EXPLORER (SEM ELEVAÇÃO - NÃO PRECISA)
-[HKEY_CLASSES_ROOT\Directory\Background\shell\Bats\shell\02_ReiniciarExplorer]
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Bats\shell\Reiniciar Explorer]
 "MUIVerb"="Reiniciar Explorer"
 "Icon"="explorer.exe"
 
