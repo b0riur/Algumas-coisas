@@ -1,0 +1,23 @@
+Windows Registry Editor Version 5.00
+
+; Pasta principal no menu de contexto
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Planos de Energia]
+"SubCommands"=""
+"MUIVerb"="Planos de Energia"
+"Icon"="powercpl.dll"
+
+; Subitem Economia de Energia
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Planos de Energia\shell\Economia de Energia]
+"MUIVerb"="Economia de Energia"
+"Icon"="C:\\Users\\boriur\\Pictures\\Icon\\Ecological leaves.ico"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Planos de Energia\shell\Economia de Energia\command]
+@="powercfg /setactive a1841308-3541-4fab-bc81-f71556f20b4a"
+
+; Subitem Ultra Desempenho
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Planos de Energia\shell\Ultra Desempenho]
+"MUIVerb"="Ultra Desempenho"
+"Icon"="C:\\Users\\boriur\\Pictures\\Icon\\Weather Forecast Lightning Storm.ico"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Planos de Energia\shell\Ultra Desempenho\command]
+@="powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c"

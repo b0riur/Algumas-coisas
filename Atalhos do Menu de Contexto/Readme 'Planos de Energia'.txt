@@ -1,0 +1,1 @@
+Adiciona atalhos de seleção para alteração entre os planos de energia "Economia de Energia" e "Desempenho Máximo" no menu de contexto da Área de Trabalho.
