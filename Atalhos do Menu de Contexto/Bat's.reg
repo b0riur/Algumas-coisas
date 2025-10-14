@@ -1,0 +1,24 @@
+Windows Registry Editor Version 5.00
+
+; PASTA PRINCIPAL NO MENU DE CONTEXTO
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Bats]
+"MUIVerb"="Bat's"
+"Icon"="C:\\Users\\seu-usuário\\Pictures\\Icon\\code.ico"
+"SubCommands"=""
+
+; LIMPEZA DE ARQUIVOS TEMPORÁRIOS (COM ELEVAÇÃO)
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Bats\shell\Limpar Temp]
+"MUIVerb"="Limpar Temp"
+"Icon"="cleanmgr.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Bats\shell\Limpar Temp\command]
+@="powershell -Command \"Start-Process cmd -ArgumentList '/c del /s /q \\\"%temp%\\\\*.*\\\" && rd /s /q \\\"%temp%\\\" && del /s /q \\\"C:\\\\Windows\\\\Temp\\\\*.*\\\" && rd /s /q \\\"C:\\\\Windows\\\\Temp\\\"' -Verb RunAs\""
+
+; REINICIAR EXPLORER (SEM ELEVAÇÃO - NÃO PRECISA)
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Bats\shell\Reiniciar Explorer]
+"MUIVerb"="Reiniciar Explorer"
+"Icon"="explorer.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Bats\shell\Reiniciar Explorer\command]
+@="cmd /c \"taskkill /f /im explorer.exe && timeout /t 2 > nul && start explorer.exe\""
