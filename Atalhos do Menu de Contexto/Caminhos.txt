@@ -1,3 +1,3 @@
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Planos de Energia]
 
-[HKEY_CLASSES_ROOT\Directory\Background\shell\Bats]
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Tools]
