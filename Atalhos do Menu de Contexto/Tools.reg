@@ -13,7 +13,7 @@ Windows Registry Editor Version 5.00
 "HasLUAShield"=""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Tools\shell\Limpar Temp\command]
-@="powershell -Command \"Start-Process cmd -ArgumentList '/c rd /s /q %temp% & md %temp% & rd /s /q C:\\Windows\\Temp & md C:\\Windows\\Temp & rd /s /q C:\\Windows\\SoftwareDistribution\\Download & md C:\\Windows\\SoftwareDistribution\\Download & rd /s /q C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue & md C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue & del /f /s /q C:\\Windows\\Prefetch\\*.*' -Verb RunAs\""
+@="powershell -Command \"Start-Process powershell -ArgumentList '-ExecutionPolicy Bypass -File C:\\Windows\\limpar-Temp.ps1' -Verb RunAs\""
 
 ; REINICIAR EXPLORER (SEM ELEVAÇÃO - NÃO PRECISA)
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Tools\shell\Reiniciar Explorer]
